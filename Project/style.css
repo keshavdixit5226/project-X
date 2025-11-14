@@ -1,0 +1,234 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #111;
+      font-family: 'Lato', sans-serif;
+      color: #d6f9dd;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      width: 100%;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .logo1 {
+      display: flex;
+      align-items: center;
+      color: transparent;
+      gap: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .logo1 img {
+      width: 2vw;
+      height: 2vw;
+    }
+
+    .logo1 span {
+      font-size: 2vw;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 1.3vw;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    /* underline animation */
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: linear-gradient(90deg, grey, lightgrey);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+
+    .nav-links a:hover::after {
+      transform: translateX(0%);
+    }
+
+    .cta-btn {
+      background: #ffffff;
+      border: 1.5px solid #ddd;
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #f2f2f2;
+    }
+
+    /* ---------- SLIDER ---------- */
+    .container {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      margin-top: 70px;
+      overflow: hidden;
+    }
+
+    .left-col {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left-col .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: scale(1);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .left-col .slide.current {
+      opacity: 1;
+      transform: scale(1.05);
+      z-index: 2;
+    }
+
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 8rem;
+      z-index: 9;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: 500ms ease opacity, 500ms ease transform;
+    }
+
+    .caption.current-caption {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 300ms;
+    }
+
+    .caption-heading h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-weight: 300;
+      color: white;
+    }
+
+    .caption-subhead {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 4px;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .caption a.btn {
+      color: #333;
+      font-size: 0.8rem;
+      text-decoration: none;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      border-radius: 2px;
+      transition: 250ms ease-in background-color, 500ms ease-in color;
+    }
+
+    .caption a.btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* ---------- NAVIGATION ARROWS ---------- */
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .slide-up,
+    .slide-down {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: auto;
+    }
+
+    .slide-down a {
+      color: #fff;
+      font-size: 3rem;
+      text-decoration: none;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .slide-down a:hover {
+      opacity: 0.7;
+    }
+    .footer{
+      background-color: black;
+    }
+    .foot{
+      text-align: center;
+      color: white;
+    }
+    #contacts{
+      color: white;
+    }
+    h3{
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
